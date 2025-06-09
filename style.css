@@ -10,6 +10,8 @@ body {
   align-items: center;
   background: whitesmoke;
   background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
 .calculator-container {
@@ -30,14 +32,18 @@ body {
 .history h2 {
   margin: 0;
   text-align: center;
-  font-size: 36px;
-  font-family: "Lucida Console", sans-serif;
+  font-size: 24px;
+  font-family: inherit;
   font-weight: 100;
 }
 
 .history-display {
   margin: 0;
   height: 100%;
+}
+
+.history-display div {
+  font-size: 20px;
 }
 
 .history-clear-btn {
@@ -48,7 +54,6 @@ body {
   width: 400px;
 }
 
-/* Display */
 .calculator-display {
   background: black;
   color: white;
@@ -63,20 +68,19 @@ body {
 .calculator-display h1 {
   margin: 0;
   padding: 25px;
-  font-size: 45px;
-  font-family: "Lucida Console", sans-serif;
+  font-size: 36px;
+  font-family: inherit;
   overflow-x: auto;
 }
 
 .calculator-display h2 {
   margin: 0;
   padding: 10px 25px;
-  font-size: 36px;
-  font-family: "Lucida Console", sans-serif;
+  font-size: 26px;
+  font-family: inherit;
   overflow-x: auto;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -93,7 +97,6 @@ body {
   background: #555;
 }
 
-/* Buttons */
 .calculator-buttons {
   display: grid;
   grid-gap: 10px;
@@ -109,6 +112,8 @@ button {
   background: rgb(200, 200, 200);
   border-radius: 5px;
   cursor: pointer;
+  padding: 10px;
+  font-family: inherit;
 }
 
 button:hover {
@@ -157,9 +162,17 @@ button:focus {
   grid-column: 3;
 }
 
-/* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
   .calculator {
     width: 95%;
   }
+}
+
+.calculator-display h2,
+.calculator-display h1,
+.history-display div,
+.history h2,
+button {
+  font-family: inherit;
+  font-size: 20px;
 }
